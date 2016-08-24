@@ -15,6 +15,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <action android:name="com.google.firebase.MESSAGING_EVENT" />
+        </service>
+        <service
+            android:name=".MyFirebaseInstanceIDService"
+            android:enabled="true"
+            android:exported="true">
+            <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+        </service>
     </application>
 
 </manifest>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "110896295727",
+    "firebase_url": "https://fcmchat-fe73f.firebaseio.com",
+    "project_id": "fcmchat-fe73f",
+    "storage_bucket": "fcmchat-fe73f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110896295727:android:c2bd4617136826f2",
+        "android_client_info": {
+          "package_name": "com.example.iman.fcmchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110896295727-8lg7bogbh7qf7locdd2o7ak77utl403l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.iman.fcmchat",
+            "certificate_hash": "7B916ED9A3B8B1D0139545058E54FA0054F76859"
+          }
+        },
+        {
+          "client_id": "110896295727-gkoq7vqdntr14krheac4qg3v9u8d67b7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdb_ywIXY0z_uLsZlGw3bo1xqbeKfIDn8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110896295727-gkoq7vqdntr14krheac4qg3v9u8d67b7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
