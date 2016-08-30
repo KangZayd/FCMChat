@@ -18,7 +18,7 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
     private static final String TAG = "FirebaseInstance";
     private OkHttpClient client = new OkHttpClient();
     public static final MediaType mediaType
-            = MediaType.parse("charset=utf-8");
+            = MediaType.parse("application/json; charset=utf-8");
     private String url = "http://localhost:8000/send";
 
     public MyFirebaseInstanceIDService() {
@@ -41,7 +41,8 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
     }
 
     private void sendRegistrationToServer(String refreshedToken) {
-        RequestBody body = RequestBody.create(mediaType, refreshedToken);
+        RequestBody body = RequestBody.create(mediaType, "{\"hash\":" + "\"" + refreshedToken +
+                "\"");
         Request request = new Request.Builder()
                 .url(url)
                 .post(body)
