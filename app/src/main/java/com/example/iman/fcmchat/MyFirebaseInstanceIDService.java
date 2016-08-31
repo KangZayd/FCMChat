@@ -8,6 +8,8 @@ import android.util.Log;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 
+import java.io.IOException;
+
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -43,10 +45,15 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
     private void sendRegistrationToServer(String refreshedToken) {
         RequestBody body = RequestBody.create(mediaType, "{\"hash\":" + "\"" + refreshedToken +
                 "\"");
+        Log.d(TAG, body.toString());
         Request request = new Request.Builder()
                 .url(url)
                 .post(body)
                 .build();
-        client.newCall(request);
+        try {
+            client.newCall(request).execute();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
